@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cá Nhân | Nguyễn Ngọc Lam Trường</title>
+    <style>
+        /* --- RESET & CƠ BẢN --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        /* --- HEADER & NAV (HIỆU ỨNG GRADIENT NỔI BẬT) --- */
+        header {
+            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 50%, #06b6d4 100%);
+            color: #ffffff;
+            padding: 3rem 1rem 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .brand h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .brand p {
+            font-size: 1.2rem;
+            color: #e0f2fe;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav ul li a:hover {
+            background: #ffffff;
+            color: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        /* --- MAIN CONTENT (BỐ CỤC CARD HIỆN ĐẠI) --- */
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: #1e293b;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid #334155;
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            border-color: #475569;
+        }
+
+        section h2 {
+            color: #38bdf8;
+            margin-bottom: 1.2rem;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 0.8rem;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+
+        #skills ul {
+            list-style-type: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        #skills li {
+            background: #0f172a;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            border-left: 4px solid #38bdf8;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        /* --- PROJECT ARTICLES (CARD SẢN PHẨM) --- */
+        .project-card {
+            background: #0f172a;
+            border: 1px solid #334155;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1);
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        .project-card em {
+            color: #a78bfa;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #090d16;
+            color: #64748b;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =========================================================================
+         1. <header>: PHẦN ĐẦU TRANG & ĐIỀU HƯỚNG
+         ========================================================================= -->
+    <header>
+        <div class="brand">
+            <h1>NGUYỄN NGỌC LAM TRƯỜNG</h1>
+            <p>Front-End Developer & AI Vibe Coder</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#projects">Dự án</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =========================================================================
+         2. <main>: NỘI DUNG CHÍNH CỦA TRANG WEB
+         ========================================================================= -->
+    <main>
+
+        <!-- SECTION 1: GIỚI THIỆU BẢN THÂN -->
+        <section id="about">
+            <h2>🚀 Giới Thiệu Bản Thân</h2>
+            <p>Xin chào! Tôi là <strong>Nguyễn Ngọc Lam Trường</strong>, một Lập trình viên Front-End đam mê tạo ra các giao diện web hiện đại, dễ sử dụng và chuẩn ngữ nghĩa HTML5.</p>
+            <p>Sứ mệnh của tôi là vận dụng tư duy logic cùng kỹ năng Vibe Coding & AI Prompting để chuyển hóa các ý tưởng sáng tạo thành sản phẩm phần mềm thực tế có giá trị cao.</p>
+        </section>
+
+        <!-- SECTION 2: KỸ NĂNG & CÔNG NGHỆ CỐT LÕI -->
+        <section id="skills">
+            <h2>⚙️ Kỹ Năng & Công Nghệ</h2>
+            <ul>
+                <li><strong>HTML5 & CSS3:</strong> Dựng cấu trúc Semantic HTML chuẩn SEO, thiết kế Responsive (Flexbox, Grid).</li>
+                <li><strong>JavaScript (ES6+):</strong> Lập trình sự kiện, thao tác DOM, xử lý bất đồng bộ.</li>
+                <li><strong>Vibe Coding & AI Prompting:</strong> Sử dụng AI để hỗ trợ khởi tạo cấu trúc mã nguồn, giải quyết bài toán lập trình.</li>
+                <li><strong>Công cụ phát triển:</strong> Git, GitHub, VS Code.</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 3: DỰ ÁN NỔI BẬT -->
+        <section id="projects">
+            <h2>🔥 Dự Án Nổi Bật</h2>
+
+            <article class="project-card">
+                <h3>Dự Án 1: Portfolio Vibe Coding</h3>
+                <p>Mô tả: Khởi tạo cấu trúc giao diện Portfolio cá nhân cho Nguyễn Ngọc Lam Trường bằng Semantic HTML5 chuẩn ngữ nghĩa.</p>
+                <p><em>Công nghệ: HTML5, CSS3, AI Assistance.</em></p>
+            </article>
+
+            <article class="project-card">
+                <h3>Dự Án 2: Ứng Dụng Quản Lý Công Việc (Task Management)</h3>
+                <p>Mô tả: Web app giúp theo dõi và quản lý danh sách công việc cần làm hàng ngày.</p>
+                <p><em>Công nghệ: HTML5, CSS3, JavaScript.</em></p>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- =========================================================================
+         3. <footer>: PHẦN CHÂN TRANG
+         ========================================================================= -->
+    <footer>
+        <p>&copy; 2026 Portfolio Nguyễn Ngọc Lam Trường. Tất cả quyền được bảo lưu.</p>
+        <p>Kết nối: <a href="https://github.com" target="_blank">GitHub</a> | <a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
+    </footer>
+
+</body>
+</html>
