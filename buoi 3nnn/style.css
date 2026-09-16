@@ -1,0 +1,63 @@
+/* Styling cơ bản */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  padding: 20px;
+  background-color: #f4f6f9;
+}
+
+/* 1. CSS GRID — KHUNG TỔNG THỂ & GAP */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Main Content chiếm phần còn lại, Sidebar cố định 300px */
+  gap: 20px; /* 3. GAP — Khoảng cách đồng nhất giữa các khối */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header & Footer trải dài toàn bộ chiều rộng */
+.header, 
+.footer {
+  grid-column: 1 / -1; /* Trải dài từ cột đầu tiên đến cột cuối cùng */
+  background-color: #1e3a8a;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.main-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.sidebar {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 2. FLEXBOX — DANH SÁCH KỸ NĂNG */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap; /* Tự động xuống dòng khi không đủ không gian */
+  gap: 10px; /* Dùng gap cho các thẻ kỹ năng thay cho margin */
+  margin-top: 15px;
+}
+
+.skill-tag {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
