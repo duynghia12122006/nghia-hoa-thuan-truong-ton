@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio cá nhân</title>
+
+    <style>
+
+        /* =========================
+           CÀI ĐẶT CHUNG
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6fb;
+            color: #333;
+            padding: 40px;
+        }
+
+
+        /* =========================
+           PORTFOLIO
+           CSS GRID CHO BỐ CỤC TỔNG THỂ
+        ========================= */
+
+        .portfolio {
+
+            display: grid;
+
+            /* Cột trái 250px
+               Cột phải chiếm phần còn lại */
+            grid-template-columns: 250px 1fr;
+
+            /* Khoảng cách giữa 2 cột */
+            gap: 30px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           SIDEBAR
+        ========================= */
+
+        .sidebar {
+
+            background-color: #263f91;
+
+            color: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            text-align: center;
+        }
+
+        .avatar {
+
+            width: 130px;
+            height: 130px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            margin-bottom: 20px;
+
+            border: 5px solid white;
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p {
+            color: #dce5ff;
+        }
+
+
+        /* =========================
+           PHẦN NỘI DUNG
+        ========================= */
+
+        .content {
+
+            display: grid;
+
+            /* Các phần tử xếp thành các hàng */
+            gap: 25px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+
+            background-color: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+
+            color: #263f91;
+
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           KỸ NĂNG
+           FLEXBOX + FLEX-WRAP
+        ========================= */
+
+        .skills {
+
+            display: flex;
+
+            /* Cho phép kỹ năng tự xuống dòng */
+            flex-wrap: wrap;
+
+            /* Khoảng cách đồng nhất */
+            gap: 10px;
+        }
+
+        .skill {
+
+            background-color: #dce5ff;
+
+            color: #263f91;
+
+            padding: 8px 16px;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           DỰ ÁN
+        ========================= */
+
+        .projects {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .project {
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        .project img {
+
+            width: 100%;
+
+            height: 150px;
+
+            object-fit: cover;
+        }
+
+        .project-info {
+
+            padding: 15px;
+        }
+
+        .project-info h3 {
+
+            color: #263f91;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           LIÊN HỆ
+        ========================= */
+
+        .contact {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+        .contact a {
+
+            background-color: #263f91;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 10px 18px;
+
+            border-radius: 7px;
+        }
+
+        .contact a:hover {
+
+            background-color: #4059aa;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .portfolio {
+
+                /* Chuyển thành 1 cột */
+                grid-template-columns: 1fr;
+
+            }
+
+            .projects {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         PORTFOLIO TỔNG THỂ
+    ================================== -->
+
+    <div class="portfolio">
+
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="sidebar">
+
+            <img
+                class="avatar"
+                src="https://i.pravatar.cc/200?img=12"
+                alt="Ảnh đại diện"
+            >
+
+            <h1>
+               Nguyen Ngoc Lam Truong
+            </h1>
+
+            <p>
+                Front-end Developer
+            </p>
+
+            <br>
+
+            <p>
+                Sinh viên Công nghệ thông tin
+            </p>
+
+        </aside>
+
+
+
+        <!-- =================================
+             CONTENT
+        ================================== -->
+
+        <main class="content">
+
+
+            <!-- ===============================
+                 GIỚI THIỆU
+            ================================ -->
+
+            <section class="card">
+
+                <h2>
+                    Giới thiệu
+                </h2>
+
+                <p>
+                    Xin chào! Tôi là Nguyen Ngoc Lam Truong
+                    một sinh viên Công nghệ thông tin.
+                    Tôi đang học HTML, CSS và JavaScript
+                    và yêu thích việc xây dựng giao diện
+                    website.
+                </p>
+
+            </section>
+
+
+
+            <!-- ===============================
+                 KỸ NĂNG
+            ================================ -->
+
+            <section class="card">
+
+                <h2>
+                    Kỹ năng
+                </h2>
+
+                <div class="skills">
+
+                    <span class="skill">
+                        HTML
+                    </span>
+
+                    <span class="skill">
+                        CSS
+                    </span>
+
+                    <span class="skill">
+                        JavaScript
+                    </span>
+
+                    <span class="skill">
+                        React
+                    </span>
+
+                    <span class="skill">
+                        Git
+                    </span>
+
+                    <span class="skill">
+                        Figma
+                    </span>
+
+                    <span class="skill">
+                        Responsive Design
+                    </span>
+
+                    <span class="skill">
+                        UI/UX
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ===============================
+                 DỰ ÁN
+            ================================ -->
+
+            <section class="card">
+
+                <h2>
+                    Dự án
+                </h2>
+
+
+                <div class="projects">
+
+
+                    <div class="project">
+
+                        <img
+                            src="https://picsum.photos/500/300?random=1"
+                            alt="Website bán hàng"
+                        >
+
+                        <div class="project-info">
+
+                            <h3>
+                                Website bán hàng
+                            </h3>
+
+                            <p>
+                                Website bán hàng được
+                                xây dựng bằng HTML và CSS.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project">
+
+                        <img
+                            src="https://picsum.photos/500/300?random=2"
+                            alt="Portfolio"
+                        >
+
+                        <div class="project-info">
+
+                            <h3>
+                                Portfolio cá nhân
+                            </h3>
+
+                            <p>
+                                Portfolio responsive sử dụng
+                                CSS Grid và Flexbox.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project">
+
+                        <img
+                            src="https://picsum.photos/500/300?random=3"
+                            alt="Blog"
+                        >
+
+                        <div class="project-info">
+
+                            <h3>
+                                Blog cá nhân
+                            </h3>
+
+                            <p>
+                                Website blog để chia sẻ
+                                kiến thức lập trình.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project">
+
+                        <img
+                            src="https://picsum.photos/500/300?random=4"
+                            alt="Dashboard"
+                        >
+
+                        <div class="project-info">
+
+                            <h3>
+                                Dashboard
+                            </h3>
+
+                            <p>
+                                Giao diện dashboard quản lý
+                                dữ liệu.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ===============================
+                 LIÊN HỆ
+            ================================ -->
+
+            <section class="card">
+
+                <h2>
+                    Liên hệ
+                </h2>
+
+                <div class="contact">
+
+                    <a href="#">
+                        Facebook
+                    </a>
+
+                    <a href="#">
+                        GitHub
+                    </a>
+
+                    <a href="#">
+                        Email
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flex & Grid Battle</title>
+
+    <style>
+
+        /* =========================
+           CÀI ĐẶT CHUNG
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #f5f7ff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #b88916;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #263f91;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+        }
+
+
+        /* =========================
+           1. CĂN GIỮA PHẦN TỬ
+        ========================= */
+
+        .center-container {
+
+            width: 100%;
+            height: 250px;
+
+            background-color: #dce6ff;
+
+            border: 3px solid #3155a5;
+
+            border-radius: 10px;
+
+            /* Dùng Flexbox */
+            display: flex;
+
+            /* Căn giữa ngang */
+            justify-content: center;
+
+            /* Căn giữa dọc */
+            align-items: center;
+        }
+
+        .center-box {
+
+            width: 100px;
+            height: 100px;
+
+            background-color: #3155a5;
+            color: white;
+
+            /* Căn chữ giữa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           2. MENU DÀN ĐỀU
+        ========================= */
+
+        .menu {
+
+            background-color: #263f91;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            /* Dùng Flexbox */
+            display: flex;
+
+            /* Dàn đều */
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .menu a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 10px 20px;
+        }
+
+        .menu a:hover {
+
+            background-color: #4059aa;
+
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           3. LƯỚI ẢNH 3 CỘT
+        ========================= */
+
+        .gallery {
+
+            /* Dùng CSS Grid */
+            display: grid;
+
+            /* Tạo 3 cột */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* Khoảng cách giữa ảnh */
+            gap: 15px;
+        }
+
+        .gallery img {
+
+            width: 100%;
+
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>
+        FLEX & GRID BATTLE
+    </h1>
+
+
+    <!-- =================================
+         1. CĂN GIỮA PHẦN TỬ
+    ================================== -->
+
+    <div class="section">
+
+        <h2>
+            1. Căn giữa phần tử
+        </h2>
+
+        <div class="center-container">
+
+            <div class="center-box">
+                CENTER
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         2. MENU DÀN ĐỀU
+    ================================== -->
+
+    <div class="section">
+
+        <h2>
+            2. Tạo menu dàn đều
+        </h2>
+
+        <nav class="menu">
+
+            <a href="#">
+                Trang chủ
+            </a>
+
+            <a href="#">
+                Sản phẩm
+            </a>
+
+            <a href="#">
+                Giới thiệu
+            </a>
+
+            <a href="#">
+                Liên hệ
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =================================
+         3. LƯỚI ẢNH 3 CỘT
+    ================================== -->
+
+    <div class="section">
+
+        <h2>
+            3. Xây lưới ảnh 3 cột
+        </h2>
+
+        <div class="gallery">
+
+            <img
+                src="https://picsum.photos/400/250?random=1"
+                alt="Ảnh 1"
+            >
+
+            <img
+                src="https://picsum.photos/400/250?random=2"
+                alt="Ảnh 2"
+            >
+
+            <img
+                src="https://picsum.photos/400/250?random=3"
+                alt="Ảnh 3"
+            >
+
+            <img
+                src="https://picsum.photos/400/250?random=4"
+                alt="Ảnh 4"
+            >
+
+            <img
+                src="https://picsum.photos/400/250?random=5"
+                alt="Ảnh 5"
+            >
+
+            <img
+                src="https://picsum.photos/400/250?random=6"
+                alt="Ảnh 6"
+            >
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
