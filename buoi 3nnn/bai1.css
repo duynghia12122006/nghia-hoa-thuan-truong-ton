@@ -1,0 +1,144 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   CHALLENGE 1
+   FLEXBOX - CĂN GIỮA
+   ========================= */
+
+.center-box {
+    height: 250px;
+
+    /* Biến container thành Flexbox */
+    display: flex;
+
+    /* Căn giữa theo chiều ngang */
+    justify-content: center;
+
+    /* Căn giữa theo chiều dọc */
+    align-items: center;
+
+    background: #1f2937;
+    border: 2px solid #38bdf8;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #38bdf8;
+    color: #111827;
+
+    font-size: 40px;
+    border-radius: 15px;
+}
+
+
+/* =========================
+   CHALLENGE 2
+   FLEXBOX - MENU DÀN ĐỀU
+   ========================= */
+
+.menu {
+    display: flex;
+
+    /* Các phần tử được chia đều */
+    justify-content: space-between;
+
+    background: #1f2937;
+    padding: 15px;
+}
+
+.menu a {
+    padding: 12px 25px;
+
+    color: white;
+    text-decoration: none;
+
+    background: #374151;
+    border-radius: 8px;
+}
+
+.menu a:hover {
+    background: #38bdf8;
+    color: #111827;
+}
+
+
+/* =========================
+   CHALLENGE 3
+   CSS GRID - 3 CỘT
+   ========================= */
+
+.image-grid {
+    display: grid;
+
+    /* Tạo 3 cột bằng nhau */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Khoảng cách giữa các ô */
+    gap: 15px;
+}
+
+.card {
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #1f2937;
+    border: 2px solid #a78bfa;
+
+    font-size: 50px;
+    border-radius: 15px;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .image-grid {
+        /* Trên màn hình nhỏ chuyển thành 1 cột */
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        /* Menu chuyển thành dọc */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
