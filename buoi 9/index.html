@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio cá nhân của Minh Anh — sinh viên yêu thích thiết kế và phát triển web.">
+  <meta name="theme-color" content="#f5f3ee">
+  <title>Minh Anh — Portfolio cá nhân</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Bỏ qua điều hướng</a>
+
+  <!-- BÀI 1: Semantic HTML5 — header chứa nhận diện và nav điều hướng đến từng section. -->
+  <header class="site-header">
+    <a class="brand" href="#trang-chu" aria-label="Minh Anh, về đầu trang"><span class="brand-mark">MA</span><span>minh anh<span class="brand-dot">.</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Mở menu"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính">
+      <a href="#gioi-thieu">Giới thiệu</a><a href="#ky-nang">Kỹ năng</a><a href="#du-an">Dự án</a><a href="#lien-he">Liên hệ</a>
+      <!-- BÀI 4: Nút này đổi theme bằng JS và CSS custom properties. -->
+      <button class="theme-toggle" type="button" aria-label="Chuyển sang giao diện tối" title="Đổi giao diện"><span class="theme-icon" aria-hidden="true">☾</span></button>
+    </nav>
+  </header>
+
+  <main id="noi-dung">
+    <!-- BÀI 1: Hero là section mở đầu, dùng một tiêu đề h1 duy nhất cho cấu trúc SEO. -->
+    <section class="hero section-shell" id="trang-chu" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Sẵn sàng cho cơ hội mới</p>
+        <h1 id="hero-title">Xin chào, mình là<br><span class="accent-text">Minh Anh.</span></h1>
+        <!-- BÀI 6: Typewriter thay đổi chức danh từ danh sách trong script.js. -->
+        <p class="hero-role">Mình là <span class="typewriter" aria-label="nhà phát triển web">nhà phát triển web</span><span class="cursor" aria-hidden="true">|</span></p>
+        <p class="hero-description">Mình thích biến những ý tưởng thú vị thành trải nghiệm số đơn giản, hữu ích và có cá tính.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#du-an">Khám phá dự án <span aria-hidden="true">↗</span></a><a class="text-link" href="#lien-he">Kết nối với mình <span aria-hidden="true">→</span></a></div>
+        <div class="hero-meta"><span>📍 Hà Nội, Việt Nam</span><span class="meta-divider"></span><span>Đang học và luôn tò mò</span></div>
+      </div>
+      <div class="hero-art" aria-label="Minh họa bàn làm việc sáng tạo" role="img">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-main"><div class="art-window"><i></i><i></i><i></i></div><div class="art-code"><span class="code-purple">const</span> <span class="code-blue">ideas</span> = <span class="code-yellow">make</span>(<br>&nbsp;&nbsp;<span class="code-green">“something useful”</span><br>);<span class="code-cursor">▍</span></div><div class="art-card-footer"><span class="art-avatar">✦</span><span>đang sáng tạo<span class="typing-dots">...</span></span></div></div>
+        <div class="floating-note note-top"><span>✳</span> design with purpose</div><div class="floating-note note-bottom"><span class="note-check">✓</span> ý tưởng thành sản phẩm</div><div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✳</div>
+      </div>
+      <a class="scroll-cue" href="#gioi-thieu" aria-label="Cuộn đến phần giới thiệu"><span></span> Cuộn để khám phá</a>
+    </section>
+
+    <!-- BÀI 1: article mô tả nội dung About Me độc lập; các section con có tiêu đề rõ ràng. -->
+    <article class="about section-shell" id="gioi-thieu" aria-labelledby="about-title" data-reveal>
+      <div class="section-heading"><p class="eyebrow">01 / Về mình</p><h2 id="about-title">Một chút về <span class="accent-text">mình</span></h2></div>
+      <div class="about-grid"><div class="about-lead"><p class="large-copy">Mình tin rằng công nghệ tốt là công nghệ khiến cuộc sống <span class="highlight">dễ dàng hơn</span>.</p><p class="body-copy">Hiện mình đang học về phát triển web và thiết kế giao diện. Mỗi dự án là một cơ hội để thử nghiệm, học thêm điều mới và tạo ra thứ gì đó có ích cho mọi người.</p><a class="text-link" href="#lien-he">Tìm hiểu thêm về mình <span aria-hidden="true">→</span></a></div><div class="about-facts"><div class="fact-card"><span class="fact-icon">⌘</span><div><strong>Thiết kế có chủ đích</strong><p>Ưu tiên trải nghiệm rõ ràng, thân thiện.</p></div></div><div class="fact-card"><span class="fact-icon">✎</span><div><strong>Học bằng cách làm</strong><p>Luôn sẵn sàng thử nghiệm và cải thiện.</p></div></div><div class="fact-card"><span class="fact-icon">♡</span><div><strong>Làm việc cùng nhau</strong><p>Trân trọng sự chia sẻ và góp ý.</p></div></div></div></div>
+    </article>
+
+    <!-- BÀI 2: Các cột kỹ năng dùng CSS Grid, thẻ kỹ năng dùng Flexbox. -->
+    <section class="skills section-shell" id="ky-nang" aria-labelledby="skills-title" data-reveal>
+      <div class="section-heading"><p class="eyebrow">02 / Bộ công cụ</p><h2 id="skills-title">Kỹ năng & <span class="accent-text">công cụ</span></h2><p class="section-intro">Những thứ mình đang dùng để biến ý tưởng thành trải nghiệm thực tế.</p></div>
+      <div class="skills-grid"><article class="skill-card"><span class="skill-number">01</span><h3>Phát triển giao diện</h3><p>Xây dựng trang web dễ dùng, hoạt động tốt trên nhiều thiết bị.</p><div class="tag-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div></article><article class="skill-card"><span class="skill-number">02</span><h3>Thiết kế & bố cục</h3><p>Sắp xếp nội dung mạch lạc và tạo giao diện nhất quán.</p><div class="tag-list"><span>Figma</span><span>UI Design</span><span>Typography</span><span>CSS Grid</span></div></article><article class="skill-card"><span class="skill-number">03</span><h3>Làm việc nhóm</h3><p>Chủ động trao đổi, tiếp nhận phản hồi và quản lý công việc.</p><div class="tag-list"><span>Git</span><span>Giao tiếp</span><span>Giải quyết vấn đề</span></div></article></div>
+    </section>
+
+    <!-- BÀI 5: Thẻ dự án do JS tạo từ Google Sheets; có dữ liệu mẫu khi chưa cấu hình URL. -->
+    <!-- BÀI 6: Bộ lọc danh mục ở đây cập nhật danh sách dự án ngay trên giao diện. -->
+    <section class="projects section-shell" id="du-an" aria-labelledby="projects-title" data-reveal>
+      <div class="section-heading projects-heading"><div><p class="eyebrow">03 / Tuyển tập</p><h2 id="projects-title">Một vài <span class="accent-text">dự án</span></h2><p class="section-intro">Những thử nghiệm nhỏ, những bài học lớn.</p></div><a class="text-link desktop-project-link" href="#lien-he">Bạn có ý tưởng? <span aria-hidden="true">↗</span></a></div>
+      <div class="project-toolbar"><div class="filter-list" role="group" aria-label="Lọc dự án theo danh mục"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Tất cả</button><button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web</button><button class="filter-button" type="button" data-filter="mobile" aria-pressed="false">Mobile</button><button class="filter-button" type="button" data-filter="design" aria-pressed="false">Thiết kế</button></div><p class="project-status" id="project-status" aria-live="polite">Đang hiển thị dự án</p></div>
+      <div class="project-grid" id="project-grid" aria-live="polite"></div>
+      <noscript><p>Hãy bật JavaScript để xem danh sách dự án.</p></noscript>
+    </section>
+
+    <!-- BÀI 1: Contact là section nội dung; footer bên dưới chứa thông tin bản quyền. -->
+    <section class="contact section-shell" id="lien-he" aria-labelledby="contact-title" data-reveal><div class="contact-card"><div><p class="eyebrow">04 / Bắt đầu trò chuyện</p><h2 id="contact-title">Cùng tạo nên điều<br><span class="accent-text">thú vị nhé.</span></h2><p>Mình luôn vui khi được nghe về ý tưởng hoặc cơ hội hợp tác mới.</p></div><a class="button button-light" href="mailto:hello@example.com">hello@example.com <span aria-hidden="true">↗</span></a><span class="contact-decoration" aria-hidden="true">✳</span></div></section>
+  </main>
+
+  <!-- BÀI 1: footer cung cấp thông tin cuối trang và liên kết mạng xã hội. -->
+  <footer class="site-footer section-shell"><a class="brand" href="#trang-chu"><span class="brand-mark">MA</span><span>minh anh<span class="brand-dot">.</span></span></a><p>Được làm bằng sự tò mò và một chút cà phê ☕</p><div class="social-links"><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a><span>© <span id="current-year">2025</span> Minh Anh</span></div></footer>
+</body>
+</html>
