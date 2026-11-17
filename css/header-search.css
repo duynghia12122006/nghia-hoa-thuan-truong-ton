@@ -1,0 +1,2 @@
+/* THÀNH VIÊN 1: kiểu riêng cho khu vực đầu trang và form tìm kiếm. */
+.header-link:hover{color:var(--brand)}.search-form .search-field:focus-within,.search-form .filter-field:focus-within{border-color:#aab4ff;box-shadow:0 0 0 3px rgba(83,104,232,.08)}.search-button{min-width:112px}.result-count{white-space:nowrap}
