@@ -1,0 +1,18 @@
+﻿<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tuần 8 | Bảng điều khiển điều kiện</title></head>
+<body>
+<main>
+  <header><h1>Bảng điều khiển điều kiện</h1><p>Một sản phẩm thực hành biến và rẽ nhánh JavaScript: điểm số, tiền tệ, số học và lời chào.</p></header>
+  <section><h2>Xếp loại điểm</h2><form id="grade-form"><label for="score">Điểm từ 0 đến 10</label> <input id="score" type="number" min="0" max="10" step="0.1" required> <button>Tính xếp loại</button></form><p id="grade-result" aria-live="polite"></p></section>
+  <section><h2>Quy đổi USD sang VND</h2><p>Tỷ giá bài tập cố định: 1 USD = 25.000 VND.</p><form id="currency-form"><label for="usd">Số USD</label> <input id="usd" type="number" min="0" step="any" required> <button>Quy đổi</button></form><p id="currency-result" aria-live="polite"></p></section>
+  <section><h2>Kiểm tra chẵn lẻ</h2><form id="even-form"><label for="even-number">Số nguyên</label> <input id="even-number" type="number" step="1" required> <button>Kiểm tra</button></form><p id="even-result" aria-live="polite"></p></section>
+  <section><h2>Tính chỉ số BMI</h2><form id="bmi-form"><label for="height">Chiều cao (m)</label> <input id="height" type="number" min="0.01" step="any" required> <label for="weight">Cân nặng (kg)</label> <input id="weight" type="number" min="0.01" step="any" required> <button>Tính BMI</button></form><p id="bmi-result" aria-live="polite"></p></section>
+  <section><h2>Đăng nhập mô phỏng</h2><p>Tài khoản mẫu: <code>student</code> / <code>lhu2026</code>.</p><form id="login-form"><label for="username">Tên đăng nhập</label> <input id="username" required> <label for="password">Mật khẩu</label> <input id="password" type="password" required> <button>Đăng nhập</button></form><p id="login-result" aria-live="polite"></p></section>
+  <section><h2>Tính giảm giá</h2><p>Hóa đơn trên 500.000đ được giảm 10%.</p><form id="discount-form"><label for="total">Tổng hóa đơn (đồng)</label> <input id="total" type="number" min="0" step="1" required> <button>Tính tiền</button></form><p id="discount-result" aria-live="polite"></p></section>
+  <section><h2>Kiểm tra tam giác đều</h2><form id="triangle-form"><label for="side-a">Cạnh A</label> <input id="side-a" type="number" min="0" step="any" required> <label for="side-b">Cạnh B</label> <input id="side-b" type="number" min="0" step="any" required> <label for="side-c">Cạnh C</label> <input id="side-c" type="number" min="0" step="any" required> <button>Kiểm tra</button></form><p id="triangle-result" aria-live="polite"></p></section>
+  <section><h2>Lời chào theo giờ</h2><p id="greeting" aria-live="polite"></p></section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
