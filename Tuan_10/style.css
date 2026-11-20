@@ -1,0 +1,5 @@
+﻿.modal { position: fixed; inset: 0; z-index: 2; display: grid; place-items: center; padding: 1rem; background: rgba(0, 0, 0, .55); }
+.modal[hidden] { display: none; }
+.modal-card { width: min(32rem, 100%); padding: 1.5rem; background: white; border: 1px solid #777; }
+.modal-card label { display: block; margin-top: .75rem; }
+.modal-card input { display: block; width: 100%; margin: .25rem 0 .75rem; }

@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tuần 10 | Bàn điều khiển DOM</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main>
+  <header><h1>Bàn điều khiển DOM</h1><p>Một giao diện thực hành chọn phần tử, thay đổi nội dung và phản hồi thao tác người dùng.</p></header>
+  <section><h2>Element Picker</h2><nav aria-label="Thực đơn sinh viên"><ul id="student-menu"><li>Học vụ</li><li>Thư viện</li><li>Câu lạc bộ</li></ul></nav><button id="highlight-menu" type="button">Tô màu các mục</button></section>
+  <section><h2>Công tắc đèn</h2><img id="lamp" alt="Bóng đèn đang tắt" width="96" height="96"><p><button id="lamp-switch" type="button">Bật đèn</button></p></section>
+  <section><h2>Nhập và xem trực tiếp</h2><label for="live-input">Nội dung</label> <input id="live-input"><p id="live-output" aria-live="polite">Nội dung sẽ xuất hiện ở đây.</p></section>
+  <section><h2>Chào theo tên</h2><form id="greeting-form"><label for="visitor-name">Tên của bạn</label> <input id="visitor-name" required> <button>Chào tôi</button></form><p id="personal-greeting" aria-live="polite"></p></section>
+  <section><h2>Thư viện ảnh</h2><img id="gallery-image" alt="Minh họa thư viện" width="320" height="160"><p><button id="previous-image" type="button">Ảnh trước</button> <button id="next-image" type="button">Ảnh tiếp</button></p><p id="gallery-caption" aria-live="polite"></p></section>
+  <section><h2>Danh sách việc cần làm</h2><form id="todo-form"><label for="todo-input">Công việc mới</label> <input id="todo-input" required> <button>Thêm việc</button></form><ul id="todo-list"></ul></section>
+  <section><h2>Đếm độ dài mật khẩu</h2><label for="password-length">Mật khẩu</label> <input id="password-length" type="password"><p id="length-output" aria-live="polite">Độ dài: 0 ký tự.</p></section>
+  <section><h2>Điều chỉnh cỡ chữ</h2><p id="resizable-text">Dùng hai nút để thay đổi cỡ chữ của đoạn văn này.</p><button id="smaller-text" type="button">Nhỏ hơn</button> <button id="larger-text" type="button">Lớn hơn</button></section>
+  <section><h2>Hiện hoặc ẩn mật khẩu</h2><label for="visible-password">Mật khẩu</label> <input id="visible-password" type="password"> <button id="toggle-password" type="button">Hiện mật khẩu</button></section>
+  <section><h2>Smart Project: hộp thoại hỗ trợ</h2><button id="open-modal" type="button">Đăng ký hỗ trợ</button></section>
+  <section id="registration-modal" class="modal" hidden aria-labelledby="modal-title"><div class="modal-card"><button id="close-modal" type="button" aria-label="Đóng hộp thoại">Đóng</button><h2 id="modal-title">Đăng ký hỗ trợ học vụ</h2><form id="registration-form"><label for="student-name">Họ tên</label> <input id="student-name" required><label for="student-email">Email</label> <input id="student-email" type="email" required> <button>Gửi đăng ký</button></form><p id="form-status" aria-live="polite"></p></div></section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
