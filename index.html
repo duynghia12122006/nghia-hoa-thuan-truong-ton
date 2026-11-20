@@ -3,120 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cổng đăng ký môn học thông minh — tìm môn, lập danh sách học phần và theo dõi tín chỉ.">
-  <title>Smart Enrollment | Đăng ký môn học</title>
-  <!-- LEADER: màu sắc, font chữ và bố cục chung nằm trong css/base.css -->
-  <link rel="stylesheet" href="css/base.css">
-  <!-- THÀNH VIÊN 1: phần đầu trang và form tìm kiếm -->
-  <link rel="stylesheet" href="css/header-search.css">
-  <!-- THÀNH VIÊN 2: thẻ môn học và hiệu ứng hover -->
-  <link rel="stylesheet" href="css/course-list.css">
-  <!-- THÀNH VIÊN 3: bảng môn đã chọn và responsive -->
-  <link rel="stylesheet" href="css/cart-table.css">
+  <title>Hello World · Hành trình Đồng Nai</title>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Smart Enrollment - về đầu trang">
-        <span class="brand-mark" aria-hidden="true">SE</span>
-        <span>Smart<span class="brand-accent">Enrollment</span></span>
-      </a>
-      <a class="header-link" href="#selected-courses">Môn đã chọn <span class="cart-count" id="cart-count">0</span></a>
-    </div>
-  </header>
+  <h1>Hello, World!</h1>
+  <p>Trang web đầu tiên của tôi.</p>
 
-  <main id="top">
-    <section class="hero container" aria-labelledby="page-title">
-      <div class="hero-copy">
-        <p class="eyebrow">CỔNG ĐĂNG KÝ MÔN HỌC THÔNG MINH</p>
-        <h1 id="page-title">Lên kế hoạch học kỳ<br><span>theo cách của bạn.</span></h1>
-        <p class="hero-description">Tìm học phần phù hợp, xây dựng danh sách đăng ký và theo dõi tín chỉ trong một nơi.</p>
-      </div>
-      <div class="credit-summary" aria-live="polite">
-        <span class="summary-label">Tín chỉ đã chọn</span>
-        <strong><span id="credit-total">0</span><span class="summary-limit"> / 25</span></strong>
-        <div class="progress-track" aria-hidden="true"><span id="credit-progress"></span></div>
-        <span class="summary-hint" id="credit-hint">Bạn có thể đăng ký tối đa 25 tín chỉ.</span>
-      </div>
-    </section>
+  <hr>
 
-    <!-- THÀNH VIÊN 1: sửa giao diện form tại css/header-search.css và logic tìm kiếm tại js/search.js -->
-    <section class="container search-section" aria-labelledby="search-heading">
-      <div class="section-heading">
-        <div><p class="eyebrow">KHÁM PHÁ HỌC PHẦN</p><h2 id="search-heading">Tìm môn học</h2></div>
-        <span class="result-count" id="result-count" aria-live="polite"></span>
-      </div>
-      <form class="search-form" id="search-form" role="search">
-        <label class="search-field" for="course-search">
-          <span class="visually-hidden">Tìm theo tên hoặc mã môn học</span>
-          <span class="search-icon" aria-hidden="true">⌕</span>
-          <input id="course-search" name="q" type="search" placeholder="Tên môn học hoặc mã môn..." autocomplete="off">
-        </label>
-        <label class="filter-field" for="credit-filter"><span class="visually-hidden">Lọc theo số tín chỉ</span>
-          <select id="credit-filter" name="credits"><option value="">Tất cả tín chỉ</option><option value="2">2 tín chỉ</option><option value="3">3 tín chỉ</option><option value="4">4 tín chỉ</option></select>
-        </label>
-        <button class="button button-primary search-button" type="submit">Tìm kiếm</button>
-      </form>
-    </section>
-
-    <div class="container content-grid">
-      <!-- THÀNH VIÊN 2: sửa giao diện danh sách tại css/course-list.css -->
-      <section class="courses-section" aria-labelledby="courses-heading">
-        <div class="section-heading compact-heading"><div><p class="eyebrow">DANH MỤC</p><h2 id="courses-heading">Môn học nổi bật</h2></div></div>
-        <div class="course-grid" id="course-list" aria-live="polite">
-          <!-- data-credits là nguồn dữ liệu tín chỉ để JS thêm vào giỏ; không đổi tên thuộc tính. -->
-          <article class="course-card" data-course-id="web101" data-code="WEB101" data-name="Lập trình Web căn bản" data-credits="3" data-category="Công nghệ">
-            <div class="course-card-top"><span class="course-category">Công nghệ</span><span class="course-credits">3 tín chỉ</span></div>
-            <p class="course-code">WEB101</p><h3>Lập trình Web căn bản</h3><p class="course-description">Nền tảng HTML, CSS và JavaScript để xây dựng trải nghiệm web hiện đại.</p>
-            <div class="course-card-footer"><span class="course-meta">Học kỳ 1 · 45 tiết</span><button class="button button-add" type="button" data-add-course aria-label="Thêm Lập trình Web căn bản">+ Thêm môn</button></div>
-          </article>
-          <article class="course-card" data-course-id="db201" data-code="DB201" data-name="Cơ sở dữ liệu" data-credits="3" data-category="Công nghệ">
-            <div class="course-card-top"><span class="course-category">Công nghệ</span><span class="course-credits">3 tín chỉ</span></div>
-            <p class="course-code">DB201</p><h3>Cơ sở dữ liệu</h3><p class="course-description">Thiết kế mô hình dữ liệu, truy vấn SQL và tổ chức dữ liệu hiệu quả.</p>
-            <div class="course-card-footer"><span class="course-meta">Học kỳ 1 · 45 tiết</span><button class="button button-add" type="button" data-add-course aria-label="Thêm Cơ sở dữ liệu">+ Thêm môn</button></div>
-          </article>
-          <article class="course-card" data-course-id="ux202" data-code="UX202" data-name="Thiết kế trải nghiệm người dùng" data-credits="2" data-category="Thiết kế">
-            <div class="course-card-top"><span class="course-category">Thiết kế</span><span class="course-credits">2 tín chỉ</span></div>
-            <p class="course-code">UX202</p><h3>Thiết kế trải nghiệm người dùng</h3><p class="course-description">Tìm hiểu nghiên cứu người dùng, kiến trúc thông tin và tạo mẫu giao diện.</p>
-            <div class="course-card-footer"><span class="course-meta">Học kỳ 1 · 30 tiết</span><button class="button button-add" type="button" data-add-course aria-label="Thêm Thiết kế trải nghiệm người dùng">+ Thêm môn</button></div>
-          </article>
-          <article class="course-card" data-course-id="algo301" data-code="CS301" data-name="Cấu trúc dữ liệu và giải thuật" data-credits="4" data-category="Công nghệ">
-            <div class="course-card-top"><span class="course-category">Công nghệ</span><span class="course-credits">4 tín chỉ</span></div>
-            <p class="course-code">CS301</p><h3>Cấu trúc dữ liệu và giải thuật</h3><p class="course-description">Phân tích độ phức tạp và lựa chọn cấu trúc dữ liệu cho từng bài toán.</p>
-            <div class="course-card-footer"><span class="course-meta">Học kỳ 1 · 60 tiết</span><button class="button button-add" type="button" data-add-course aria-label="Thêm Cấu trúc dữ liệu và giải thuật">+ Thêm môn</button></div>
-          </article>
-          <article class="course-card" data-course-id="eng110" data-code="ENG110" data-name="Tiếng Anh học thuật" data-credits="2" data-category="Kỹ năng">
-            <div class="course-card-top"><span class="course-category">Kỹ năng</span><span class="course-credits">2 tín chỉ</span></div>
-            <p class="course-code">ENG110</p><h3>Tiếng Anh học thuật</h3><p class="course-description">Rèn luyện kỹ năng đọc tài liệu, viết và thuyết trình trong môi trường học thuật.</p>
-            <div class="course-card-footer"><span class="course-meta">Học kỳ 1 · 30 tiết</span><button class="button button-add" type="button" data-add-course aria-label="Thêm Tiếng Anh học thuật">+ Thêm môn</button></div>
-          </article>
-          <article class="course-card" data-course-id="math205" data-code="MTH205" data-name="Toán rời rạc" data-credits="3" data-category="Cơ sở ngành">
-            <div class="course-card-top"><span class="course-category">Cơ sở ngành</span><span class="course-credits">3 tín chỉ</span></div>
-            <p class="course-code">MTH205</p><h3>Toán rời rạc</h3><p class="course-description">Các nền tảng logic, tổ hợp và đồ thị phục vụ ngành khoa học máy tính.</p>
-            <div class="course-card-footer"><span class="course-meta">Học kỳ 1 · 45 tiết</span><button class="button button-add" type="button" data-add-course aria-label="Thêm Toán rời rạc">+ Thêm môn</button></div>
-          </article>
-          <p class="empty-results" id="empty-results" hidden>Không tìm thấy môn học phù hợp. Hãy thử từ khóa khác.</p>
-        </div>
-      </section>
-
-      <!-- THÀNH VIÊN 3: sửa bảng và breakpoint responsive tại css/cart-table.css; logic giỏ tại js/cart.js -->
-      <aside class="cart-panel" id="selected-courses" aria-labelledby="cart-heading">
-        <div class="cart-heading"><div><p class="eyebrow">KẾ HOẠCH HỌC KỲ</p><h2 id="cart-heading">Môn đã chọn</h2></div><span class="cart-badge" id="cart-badge">0 môn</span></div>
-        <div class="table-wrap">
-          <table class="cart-table">
-            <thead><tr><th scope="col">Môn học</th><th scope="col">TC</th><th scope="col"><span class="visually-hidden">Thao tác</span></th></tr></thead>
-            <tbody id="cart-items"><tr class="cart-empty-row"><td colspan="3">Danh sách đang trống.<br><span>Thêm môn học để bắt đầu kế hoạch.</span></td></tr></tbody>
-          </table>
-        </div>
-        <div class="cart-footer"><div class="cart-total"><span>Tổng số tín chỉ</span><strong><span id="cart-total">0</span> <small>/ 25</small></strong></div><p class="cart-note" id="cart-message" aria-live="polite">Bạn có thể đăng ký tối đa 25 tín chỉ.</p><button class="button button-clear" id="clear-cart" type="button" disabled>Xóa tất cả môn</button></div>
-      </aside>
-    </div>
-  </main>
-
-  <footer class="site-footer"><div class="container footer-inner"><span>Smart Enrollment</span><span>Bản mẫu học tập · Đăng ký môn học thông minh</span></div></footer>
-
-  <!-- Thành viên 1: tìm kiếm/lọc. Thành viên 3: giỏ hàng và giới hạn 25 tín chỉ. -->
-  <script src="js/cart.js" defer></script>
-  <script src="js/search.js" defer></script>
+  <h1>Hành trình Đồng Nai</h1>
+  <p>Khám phá những điểm đến gần gũi với thiên nhiên.</p>
+  <h2>Điểm đến nổi bật</h2>
+  <p>Thác Giang Điền là một nơi phù hợp cho chuyến đi cuối tuần.</p>
+  <a href="https://vi.wikipedia.org/wiki/%C4%90%E1%BB%93ng_Nai">Tìm hiểu về Đồng Nai</a>
 </body>
 </html>
