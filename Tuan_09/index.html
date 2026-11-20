@@ -1,0 +1,20 @@
+﻿<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tuần 9 | Phòng thực hành hàm và vòng lặp</title></head>
+<body>
+<main>
+  <header><h1>Phòng thực hành hàm và vòng lặp</h1><p>Bộ công cụ học tập tổng hợp: mỗi chức năng dùng lại hàm, điều kiện hoặc vòng lặp.</p></header>
+  <section><h2>Máy đếm từ 1 đến 100</h2><button id="count-button">Tạo dãy số</button><p id="count-result"></p><p><strong>Số chẵn:</strong> <span id="even-result"></span></p></section>
+  <section><h2>Function Factory: diện tích hình chữ nhật</h2><p id="area-results"></p></section>
+  <section><h2>Tính thuế bằng hàm tái sử dụng</h2><form id="tax-form"><label for="income">Thu nhập</label> <input id="income" type="number" min="0" required> <label for="tax-rate">Thuế suất (%)</label> <input id="tax-rate" type="number" min="0" step="any" required> <button>Tính thuế</button></form><p id="tax-result" aria-live="polite"></p></section>
+  <section><h2>Bảng cửu chương 7</h2><ol id="times-table"></ol></section>
+  <section><h2>Tính tổng từ 1 đến n</h2><form id="sum-form"><label for="sum-n">Số nguyên dương n</label> <input id="sum-n" type="number" min="1" step="1" required> <button>Tính tổng</button></form><p id="sum-result" aria-live="polite"></p></section>
+  <section><h2>Kiểm tra số nguyên tố</h2><form id="prime-form"><label for="prime-number">Số nguyên</label> <input id="prime-number" type="number" step="1" required> <button>Kiểm tra</button></form><p id="prime-result" aria-live="polite"></p></section>
+  <section><h2>Máy tính</h2><form id="calculator-form"><label for="first-number">Số thứ nhất</label> <input id="first-number" type="number" step="any" required> <label for="operation">Phép tính</label> <select id="operation"><option value="+">Cộng (+)</option><option value="-">Trừ (−)</option><option value="*">Nhân (×)</option><option value="/">Chia (÷)</option></select> <label for="second-number">Số thứ hai</label> <input id="second-number" type="number" step="any" required> <button>Tính</button></form><p id="calculator-result" aria-live="polite"></p></section>
+  <section><h2>Tìm số lớn nhất trong ba số</h2><form id="max-form"><label for="max-a">Số thứ nhất</label> <input id="max-a" type="number" step="any" required> <label for="max-b">Số thứ hai</label> <input id="max-b" type="number" step="any" required> <label for="max-c">Số thứ ba</label> <input id="max-c" type="number" step="any" required> <button>Tìm số lớn nhất</button></form><p id="max-result" aria-live="polite"></p></section>
+  <section><h2>Vòng lặp chào hỏi</h2><ul id="greetings"></ul></section>
+  <section><h2>Dịch vụ học tập</h2><div id="service-list"></div></section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
