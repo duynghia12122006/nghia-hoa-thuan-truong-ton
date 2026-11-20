@@ -1,0 +1,15 @@
+﻿:root { color-scheme: light; font-family: Arial, sans-serif; color: #1c2c36; background: #f2f6f5; }
+body { margin: 0; line-height: 1.5; }
+.site-header { padding: 2.5rem max(1rem, calc((100% - 68rem) / 2)); color: white; background: #164e55; }
+.site-header h1 { margin: .2rem 0; font-size: clamp(2rem, 5vw, 3.5rem); }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; }
+main { width: min(68rem, calc(100% - 2rem)); margin: 1.5rem auto; }
+.panel { margin: 1rem 0; padding: 1.25rem; background: white; border: 1px solid #d3dfdc; border-radius: .8rem; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.controls label { font-weight: bold; }
+input, select, button { padding: .55rem .7rem; font: inherit; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: .8rem; }
+.product-card { padding: 1rem; border: 1px solid #cfdbd8; border-radius: .6rem; }
+.product-card h3 { margin-top: 0; }
+.product-card button { margin-left: .5rem; }
+footer { padding: 1rem; text-align: center; background: #dce9e5; }
